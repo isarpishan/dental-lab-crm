@@ -1,0 +1,1 @@
+ALTER TABLE "ddl"."practices" ADD COLUMN "default_delivery_kind" text;

@@ -1,0 +1,1 @@
+ALTER TABLE "ddl"."work_types" ADD COLUMN "group_key" text;

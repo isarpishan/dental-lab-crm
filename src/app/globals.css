@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/*
+ * زبان طراحی = سایت ddl-pishan.at (اسکیل `ddl-website-design`).
+ * مقدارها مستقیم از `styles.css` و `cooperation.css` سایت آمده‌اند. اگر سایت
+ * عوض شد، اینجا هم باید عوض شود (docs/01-brand.md).
+ *
+ * rose کم استفاده می‌شود: شماره‌های کوچک، خط زیر آیتم فعال، تگ‌های حاشیه‌دار،
+ * فوکوس، و «اقدام لازم است». دکمهٔ اصلی rose نیست؛ همان دکمهٔ قرصی گرم فرم
+ * Zusammenarbeit سایت است.
+ */
+@theme {
+  /* ── سطح‌ها ── */
+  --color-black: #050505;        /* canvas سایت */
+  --color-soft: #0c0c0c;         /* زمینهٔ عکس و پیش‌نمایش */
+  --color-field: #151713;        /* فیلد فرم */
+  --color-field-line: #42453d;
+  --color-panel-line: #35392f;   /* تنها جعبه‌های لازم (مثل کادر Datenschutz سایت) */
+
+  /* ── متن ── */
+  --color-white: #f4f2ef;
+  --color-muted: #a6a19d;
+  --color-paragraph: #bbbcb5;
+  --color-nav: rgb(244 242 239 / 0.78);
+
+  /* ── خط ── */
+  --color-line: rgb(244 242 239 / 0.18);
+  --color-line-strong: rgb(244 242 239 / 0.38);
+
+  /* ── تأکید ── */
+  --color-rose: #b1847a;
+  --color-rose-light: #d0b2a0;   /* لینک و فوکوس داخل فرم‌ها */
+  --color-button: #c6ae94;       /* دکمهٔ قرصی اصلی */
+  --color-button-ink: #171913;
+  --color-success-line: #65715a;
+
+  /* ── سازنده‌ها (فقط علامت کوچک در «Materialien»؛ از عکس دستگاه‌های لابراتوار، ۲۴ اکتبر ۲۰۲۶) ── */
+  --color-sprintray: #b8203a;    /* قرمز SprintRay: لبهٔ قرمز MIDAS و پنجرهٔ NanoCure */
+  --color-formlabs: #e8642e;     /* نارنجی Formlabs: درپوش Form 3B */
+
+  /* ── وضعیت Lager (فقط عدد و نوار موجودی در «Materialien»؛ خواستهٔ کاربر، ۲۴ اکتبر ۲۰۲۶) ── */
+  --color-lager-gut: #8fa874;      /* بیش از نیمی از خرید مانده */
+  --color-lager-mittel: #d9a94e;   /* ۲۰ تا ۵۰ درصد */
+  --color-lager-knapp: #e2574a;    /* کمتر از ۲۰ درصد یا تمام */
+
+  /* پول ورودی در فهرست‌های مخلوط (Privat، Bank، Fixkosten، Verlauf) — خواستهٔ کاربر ۲۵ اکتبر ۲۰۲۶؛ همان سبز ملایم پالت */
+  --color-einnahme: #8fa874;
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --radius-field: 8px;
+  --radius-panel: 12px;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    background: var(--color-black);
+  }
+
+  body {
+    overflow-x: hidden; /* مثل سایت */
+    background: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* مثل سایت: حلقهٔ rose با فاصله */
+  :focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 5px;
+  }
+
+  /*
+   * فیلد انتخاب (`Auswahl`): Safari با ظاهر خودش padding را نادیده می‌گیرد و فیلد کوتاه‌تر از بقیه می‌شود
+   * (عکس کاربر، ۲۴ اکتبر ۲۰۲۶). پس ظاهر خود مرورگر خاموش و پیکان ساده به رنگ muted.
+   */
+  .auswahl {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23a6a19d' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+  }
+
+  /* داخل فرم‌ها، مثل cooperation.css */
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline-color: var(--color-rose-light);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* «01 / AUFTRÄGE»: برچسب کوچک سایت */
+  .eyebrow {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .skip-link {
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    left: 10px;
+    padding: 10px 14px;
+    background: var(--color-white);
+    color: var(--color-black);
+    transform: translateY(-150%);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  /* دندان‌های Kieferbogen (عنصر SVG، پس فوکوس را خودمان روی شکل نشان می‌دهیم) */
+  .zahn-ziel {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .zahn-form {
+    stroke: rgb(244 242 239 / 0.5);
+    stroke-width: 1.2px;
+    transition: stroke 180ms ease;
+  }
+
+  @media (hover: hover) {
+    .zahn-ziel:hover .zahn-form {
+      stroke: var(--color-white);
+    }
+  }
+
+  .zahn-ziel:focus-visible .zahn-form {
+    stroke: var(--color-rose);
+    stroke-width: 2.5px;
+  }
+
+  /* عرض محتوا مثل `--page` سایت */
+  .page {
+    width: min(1360px, calc(100vw - 96px));
+    margin-inline: auto;
+  }
+
+  @media (max-width: 980px) {
+    .page {
+      width: calc(100vw - 48px);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      width: calc(100vw - 32px);
+    }
+  }
+}

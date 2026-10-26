@@ -1,0 +1,29 @@
+# فقط برای توسعه روی Mac: دیتابیس و صندوق ایمیل آزمایشی.
+# اجرا: pnpm db:up   (رابط Mailpit: http://localhost:8025)
+name: ddl-dev
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ddl
+      POSTGRES_PASSWORD: ddl-dev
+      POSTGRES_DB: ddl
+    ports:
+      - "127.0.0.1:5433:5432" # 5433 تا با Postgres دیگری روی Mac تداخل نکند
+    volumes:
+      - db-daten:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ddl -d ddl"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  mail:
+    image: axllent/mailpit:latest
+    ports:
+      - "127.0.0.1:1025:1025" # SMTP
+      - "127.0.0.1:8025:8025" # صفحهٔ دیدن ایمیل‌ها
+
+volumes:
+  db-daten:

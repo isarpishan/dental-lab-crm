@@ -1,0 +1,7 @@
+ALTER TABLE "ddl"."invoice_lines" ADD COLUMN "rabatt_art" text;--> statement-breakpoint
+ALTER TABLE "ddl"."invoice_lines" ADD COLUMN "rabatt_wert" integer;--> statement-breakpoint
+ALTER TABLE "ddl"."invoice_lines" ADD COLUMN "rabatt_cent" integer DEFAULT 0 NOT NULL;--> statement-breakpoint
+ALTER TABLE "ddl"."order_positions" ADD COLUMN "rabatt_art" text;--> statement-breakpoint
+ALTER TABLE "ddl"."order_positions" ADD COLUMN "rabatt_wert" integer;--> statement-breakpoint
+ALTER TABLE "ddl"."invoice_lines" ADD CONSTRAINT "invoice_lines_rabatt" CHECK (("ddl"."invoice_lines"."rabatt_art" is null and "ddl"."invoice_lines"."rabatt_wert" is null and "ddl"."invoice_lines"."rabatt_cent" = 0) or ("ddl"."invoice_lines"."rabatt_art" in ('prozent', 'betrag') and "ddl"."invoice_lines"."rabatt_wert" > 0));--> statement-breakpoint
+ALTER TABLE "ddl"."order_positions" ADD CONSTRAINT "order_positions_rabatt" CHECK (("ddl"."order_positions"."rabatt_art" is null and "ddl"."order_positions"."rabatt_wert" is null) or ("ddl"."order_positions"."rabatt_art" = 'betrag' and "ddl"."order_positions"."rabatt_wert" > 0) or ("ddl"."order_positions"."rabatt_art" = 'prozent' and "ddl"."order_positions"."rabatt_wert" between 1 and 10000));

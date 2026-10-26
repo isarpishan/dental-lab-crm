@@ -1,0 +1,223 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790858773964,
+      "tag": "0000_basis",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790860607735,
+      "tag": "0001_behandlung_gruppe",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790862139225,
+      "tag": "0002_express",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790862402834,
+      "tag": "0003_ordination_lieferart",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790864700305,
+      "tag": "0004_auftraege",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790873638686,
+      "tag": "0005_implantat_gegenkiefer",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790876473170,
+      "tag": "0006_nachrichten",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1790880057243,
+      "tag": "0007_design_freigabe",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1790881878142,
+      "tag": "0008_produktion",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1790916534536,
+      "tag": "0009_touren",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790920209742,
+      "tag": "0010_dokumente_reklamation",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1790923634493,
+      "tag": "0011_benachrichtigungen",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1791055162051,
+      "tag": "0012_vereinbarung",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1791057537974,
+      "tag": "0013_abrechnung_positionen",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1791060313822,
+      "tag": "0014_rechnungen",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1791094934672,
+      "tag": "0015_rechnungsversand_zahlungen",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1791099871224,
+      "tag": "0016_mahnungen",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1791125842092,
+      "tag": "0017_portal_anfragen",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1791185697323,
+      "tag": "0018_tempo_stufen",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1791185730107,
+      "tag": "0019_tempo_alte_spalten",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1791262752700,
+      "tag": "0020_rabatt",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1791296870139,
+      "tag": "0021_modell_bild",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1792837577353,
+      "tag": "0022_material_bestand",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1792840572158,
+      "tag": "0023_formlabs_materialien",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1792841986125,
+      "tag": "0024_flaschen_fuellung",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1792844817251,
+      "tag": "0025_ausgaben",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1792846266476,
+      "tag": "0026_beleg_eingang",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1792861200396,
+      "tag": "0027_scan_zugaenge",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1792938215430,
+      "tag": "0028_privat",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1792939310324,
+      "tag": "0029_fixkosten",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1792940381163,
+      "tag": "0030_bank",
+      "breakpoints": true
+    }
+  ]
+}

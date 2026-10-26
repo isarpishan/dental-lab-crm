@@ -1,0 +1,21 @@
+# فقط کد برنامه وارد image می‌شود؛ نه داده، نه رازها، نه ساخته‌های Mac.
+.git
+.claude
+node_modules
+.next
+.next-test
+data
+backups
+.env
+.env.*
+*.tsbuildinfo
+next-env.d.ts
+DDL System.app
+DDL System starten.command
+docs
+brand
+coverage
+playwright-report
+test-results
+.DS_Store
+.deployment-id

@@ -1,0 +1,2 @@
+ALTER TABLE "ddl"."material_lots" ADD COLUMN "fill_quarters" integer;--> statement-breakpoint
+ALTER TABLE "ddl"."material_lots" ADD CONSTRAINT "material_lots_fuellung" CHECK ("ddl"."material_lots"."fill_quarters" is null or "ddl"."material_lots"."fill_quarters" between 1 and 4);

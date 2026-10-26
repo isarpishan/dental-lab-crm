@@ -1,0 +1,30 @@
+node_modules/
+.next/
+.next-test/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+next-env.d.ts
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Runtime data (patient files, database volumes, backups)
+data/
+backups/
+
+.DS_Store
+.claude/settings.local.json
+
+# Startprogramme werden mit `pnpm launcher:build` erzeugt
+DDL System.app/
+Exocad Fernzugriff.app/
+DDL Ablage.app/
+DDL Ablage hochladen.app/
+
+# nur im Docker-Build (next.config.ts)
+.deployment-id

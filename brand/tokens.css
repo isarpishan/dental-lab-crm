@@ -1,0 +1,52 @@
+/* Digital Dental Lab — Brand Guide v1.0 — design tokens
+   Drop this into any HTML/CSS output. Values come from the guide; see SKILL.md for roles. */
+
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap");
+
+:root {
+  /* Core palette — approximate share of any composition */
+  --ddl-carbon: #050505;      /* 65%  base (dark)                          */
+  --ddl-ivory: #F4F2EF;       /* 25%  base (light)                         */
+  --ddl-graphite: #A6A19D;    /*  8%  secondary information                */
+  --ddl-rose-metal: #B1847A;  /*  2%  emphasis, CTA, key details — only    */
+
+  /* Structural neutrals sampled from the guide pages (not brand colors) */
+  --ddl-paper: #FFFDFA;               /* light page that Ivory cards sit on  */
+  --ddl-surface-dark: #151515;        /* card / panel on Carbon              */
+  --ddl-rule-dark: #333333;           /* 1px hairline on Carbon              */
+  --ddl-rule-light: #D8D4CE;          /* 1px hairline on light backgrounds   */
+  --ddl-text-muted-light: rgb(5 5 5 / 0.64); /* secondary text on light — Graphite is too faint there */
+
+  /* Type — never more than these two families in one output */
+  --ddl-font-latin: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 300 / 400 / 500 */
+  --ddl-font-fa: Vazirmatn, Tahoma, sans-serif;                     /* 400 body / 700 headings */
+  --ddl-leading-fa: 1.6;       /* Persian line-height must be >= 1.5 */
+  --ddl-leading-latin: 1.35;
+  --ddl-tracking-label: 0.06em;
+
+  /* Shape */
+  --ddl-radius: 12px;
+  --ddl-rule: 1px;
+}
+
+/* Dark is the default brand surface (Carbon is 65%). */
+.ddl-dark  { background: var(--ddl-carbon); color: var(--ddl-ivory); }
+.ddl-dark  .ddl-muted { color: var(--ddl-graphite); }
+.ddl-light { background: var(--ddl-paper); color: var(--ddl-carbon); }
+.ddl-light .ddl-muted { color: var(--ddl-text-muted-light); }
+
+.ddl-fa    { font-family: var(--ddl-font-fa); line-height: var(--ddl-leading-fa); direction: rtl; }
+.ddl-fa h1, .ddl-fa h2, .ddl-fa h3 { font-weight: 700; }
+
+.ddl-latin { font-family: var(--ddl-font-latin); line-height: var(--ddl-leading-latin); }
+.ddl-latin h1, .ddl-latin h2 { font-weight: 300; letter-spacing: -0.01em; }
+
+.ddl-label {
+  font-family: var(--ddl-font-latin);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ddl-tracking-label);
+  color: var(--ddl-graphite);
+}
+.ddl-accent { color: var(--ddl-rose-metal); }

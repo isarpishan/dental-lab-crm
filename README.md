@@ -72,4 +72,8 @@ repository. Never commit `.env` or the `data/` folder.
 ## License
 
 MIT – free to use, change and share. **No warranty and no liability**: you use this
-software at your own risk. See [LICENSE](LICENSE) (the DDL name, logo and photos are excluded).
+software at your own risk. See [LICENSE](LICENSE).
+
+Not covered by the license: the name "Digital Dental Lab", the DDL logo (`brand/`,
+`public/**/ddl-mark.png`) and the product photos (`public/bilder/`). Replace them with your own.
+
